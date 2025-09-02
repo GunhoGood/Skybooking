@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>Airproject</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>MySqlDriver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>MySqlURL</param-name>
+		<param-value>jdbc:mysql://localhost:3306/air</param-value>
+	</context-param>
+	<context-param>
+		<param-name>MySqlId</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>MySqlPwd</param-name>
+		<param-value>87938260</param-value>
+	</context-param>
+
+
+	<!--세션 유지 기간 20분 -->
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+	<!-- 에러 페이지 설정 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/500.jsp</location>
+	</error-page>
+
+	<!-- 한글 깨짐 방지를 위한 필터 설정 -->
+	<filter>
+		<filter-name>SetCharEncoding</filter-name>
+		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SetCharEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	
+	
+
+</web-app>
