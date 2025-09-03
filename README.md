@@ -5,7 +5,7 @@
 테이블 명세서 : https://docs.google.com/spreadsheets/d/1pOhDvET7EIoF8Fnaf60ir8-h-I34NmywiwHDD8lgFbo/edit?gid=0#gid=0
 
 
-# Skybooking - 팀프로젝트
+# Skybooking - 팀프로젝트 (팀장) 
 항공편 예약 시스템 - 자바 기반 (JSP) 웹
 
 ## 주요 기능
